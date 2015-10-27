@@ -1,0 +1,11 @@
+<md-card ng-repeat="r in recommendations" flex>
+ <img src="img/logo.png" ng-src="{{ getRandomPhoto(r) }}" alt="{{r.name}}" class="md-card-image" />
+ <md-card-content>
+   <h2 class="md-title">{{r.name}} ~ {{getYearsOld(r)}}</h2>
+   <p>{{ m.bio }}</p>
+ </md-card-content>
+ <div class="md-actions" layout="row" layout-align="end center">
+   <md-button>LIKE</md-button>
+   <md-button>DISLIKE</md-button>
+ </div>
+</md-card>

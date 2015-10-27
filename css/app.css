@@ -1,0 +1,156 @@
+body {
+  padding-top: 64px;
+  background: #f6f6f6;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  height: 100%;
+}
+
+:focus {
+  outline: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+input {
+  color: #666 !important;
+  font-size: 16px !important;
+}
+
+md-sidenav md-toolbar > md-list-item {
+  padding-top: 5px;
+}
+
+.arrow-box {
+	position: relative;
+	background: #fff;
+	border: 1px solid #e2e2e2;
+}
+
+.arrow-box:after, .arrow-box:before {
+  top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow-box:before {
+  border-color: rgba(226, 226, 226, 0);
+	border-width: 6px;
+	margin-top: -6px;
+}
+
+.arrow-box:after {
+  border-color: rgba(255, 255, 255, 0);
+	border-width: 5px;
+	margin-top: -5px;
+}
+
+.arrow-box-right:after, .arrow-box-right:before {
+	left: 100%;
+}
+
+.arrow-box-right:after {
+	border-left-color: #fff;
+}
+
+.arrow-box-right:before {
+	border-left-color: #e2e2e2;
+}
+
+.arrow-box-left:after, .arrow-box-left:before {
+	right: 100%;
+}
+
+.arrow-box-left:after {
+	border-right-color: #fff;
+}
+
+.arrow-box-left:before {
+	border-right-color: #e2e2e2;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.fixed md-input-container {
+  padding: 5px;
+}
+
+.fixed md-input-container.md-icon-left > md-icon {
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+.fixed-bottom {
+  bottom: 0;
+}
+
+.fixed-left {
+  height: 100%;
+  left: 0;
+}
+
+.flex-md-33 > .fixed-left,
+.flex-sm-33 > .fixed-left {
+  width: 33%;
+}
+
+.flex-25 > .fixed-left {
+  width: 25%;
+}
+
+.bordered {
+  border-color: #e2e2e2;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.bordered.bordered-right {
+  border: 0;
+  border-right: 1px solid #e2e2e2;
+}
+
+#input-form-message {
+  padding: 5px;
+  background: #fff;
+  margin-left: 1px;
+}
+
+.messages-container .message {
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.messages-container .message > * {
+  max-width: 50%;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #444;
+  border-color: #f2f2f2;
+  box-shadow: 0 1px 1px 0 rgba(33,33,33,.1),0 0px 1px 0 rgba(33,33,33,.1),0 1px 1px -1px rgba(33,33,33,.1);
+}
+
+.scrollable-container {
+  overflow-y: auto;
+  max-height: 462px;
+}

@@ -1,0 +1,38 @@
+<section class="messages-section" layout="row" layout-wrap>
+  <aside class="md-primary conversations-container" flex="{{ (messages) ? 25 : none }}" flex-sm="{{ (messages) ? 33 : none }}">
+    <md-list class="fixed fixed-left bg-white bordered border-right">
+      <md-list-item class="md-2-line" ng-repeat="c in conversations" ng-click="loadConversation(c._id)">
+        <img class="md-avatar" src="img/logo.png" ng-src="{{c.person.photos[0].url}}">
+        <div class="md-list-item-text">
+          <h3>{{ c.person.name }}</h3>
+          <p>{{ getLastMessage(c) }}</p>
+        </div>
+        <md-divider></md-divider>
+      </md-list-item>
+    </md-list>
+  </aside>
+  <section class="messages-container" flex ng-show="messages">
+    <section class="scrollable-container" layout="column" layout-padding>
+      <div
+        layout
+        layout-padding
+        layout-align="{{ isMe(m) ? 'end' : 'start'}} center"
+        class="message"
+        ng-repeat="m in messages track by $index">
+          <div
+            class="item-text bordered arrow-box"
+            ng-class="{true:'arrow-box-right', false:'arrow-box-left'}[isMe(m)]">
+            {{m.message}}
+          </div>
+      </div>
+    </section>
+    <section id="input-form-message" class="fixed fixed-bottom bordered">
+      <form ng-submit="sendMessage()">
+        <md-input-container class="md-icon-left" md-no-float>
+          <md-icon class="material-icons">send</md-icon>
+          <input type="text" ng-model="textMessage" placeholder="Message..." />
+        </md-input-container>
+      </form>
+    </section>
+  </section>
+</section>
